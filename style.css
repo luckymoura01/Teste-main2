@@ -1,0 +1,117 @@
+body{
+    font-family: "quicksand", sans-serif;
+    background: #1c1c1c; 
+    color: white ;
+}
+
+section{
+    min-height: 100vh;
+    width: 80% ;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+
+.title {
+    font-size: 3rem;
+    margin: 2rem 0rem;
+}
+
+.faq {
+    max-width: 700px;
+    margin-top: 2rem;
+    padding-bottom:1rem;
+    border-bottom: 2px solid white;
+    cursor: pointer;
+}
+
+.pergunta {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+}
+
+.pergunta h3 {
+    font-size: 1.4rem;
+}
+
+.resposta {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 1.4s ease;
+}
+
+.resposta p {
+    padding-top: 1rem ;
+    line-height: 1.6rem;
+    font-size: 1rem;
+}
+
+.faq.active .resposta {
+    max-height: 500px;
+    animation: fade 1s ease-in-out;
+}
+
+.faq.active svg {
+    transform: rotate(180deg);
+}
+svg {
+     transition: transform 0.4s ease-in;
+}
+
+@keyframes fade {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0px);
+    }
+}
+
+.slider {
+    position: relative;
+    width: 100%;
+    max-width: 700px; /* ou o tamanho que desejar */
+    margin-bottom: 1rem; /* espaçamento entre slider e texto */
+    overflow: hidden;
+  }
+
+  .slide {
+    display: none; /* esconder todos inicialmente */
+    width: 100%;
+  }
+
+  .slider .slide.active {
+    display: block;
+  }
+
+  .slider img {
+    width: 100%;
+    display: block;
+  }
+
+  .slider button.prev,
+.slider button.next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(0,0,0,0.5);
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  font-size: 1.5rem;
+}
+
+.slider button.prev {
+    left: 10px;
+  }
+
+  .slider button.next {
+    right: 10px;
+  }
