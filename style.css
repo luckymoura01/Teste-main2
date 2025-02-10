@@ -1,7 +1,8 @@
 body{
     font-family: "quicksand", sans-serif;
-    background: #3880AE ; 
-    color: white ;
+    background: #ffffff ; 
+    color: rgba(0, 0, 0, 0.801) ;
+    margin-top:  0;
 }
 
 section{
@@ -23,7 +24,7 @@ section{
     max-width: 700px;
     margin-top: 2rem;
     padding-bottom:1rem;
-    border-bottom: 2px solid white;
+    border-bottom: 2px solid rgb(49, 49, 49);
     cursor: pointer;
 }
 
@@ -172,3 +173,14 @@ svg {
   .modal-next {
     right: 10px;
   }
+
+  .navbar {
+    background-color: #2E79B9;
+    color: white;
+    text-align: center;
+    padding: 15px;
+    font-size: 20px;
+    font-weight: bold;
+    font-family: Arial, sans-serif;
+    width: 300%;
+}
